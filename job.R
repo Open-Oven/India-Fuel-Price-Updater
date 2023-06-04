@@ -6,7 +6,7 @@ library(lubridate)
 library(jsonlite)
 
 # Source file
-pdf <- "https://www.ppac.gov.in/WriteReadData/userfiles/file/PP_9_a_DailyPriceMSHSD_Metro.pdf"
+pdf <- "https://ppac.gov.in/uploads/page-images/1685678095_4a9786ff061f3b86f311.pdf"
 
 # Read csv files
 
