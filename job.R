@@ -5,8 +5,13 @@ library(tidyverse)
 library(lubridate)
 library(jsonlite)
 
+
+url <- "https://ppac.gov.in/retail-selling-price-rsp-of-petrol-diesel-and-domestic-lpg/rsp-of-petrol-and-diesel-in-metro-cities-since-16-6-2017"
+read_url <- readLines(url, encoding = "UTF-8", warn=FALSE)
+ind <- grep('fz18 fw400 my-4 mb-auto',read_url)
+
 # Source file
-pdf <- "https://ppac.gov.in/uploads/page-images/1685678095_4a9786ff061f3b86f311.pdf"
+pdf <- gsub(x=read_url[ind], pattern=".*(https.*pdf).*", replace="\\1")
 
 # Read csv files
 
